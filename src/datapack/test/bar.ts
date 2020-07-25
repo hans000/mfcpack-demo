@@ -1,21 +1,19 @@
-import McFn from "../../lib/createFn";
-import { toNormalFunction, getRestName } from "../../util";
+import path from 'path'
+import { MFunction, mout } from '../../../mcfpack/src'
 
-const fn = new McFn(getRestName(__filename))
-
-
+const mf = new MFunction(__filename)
 const list: number[] = [8, 5, 6, 1, 4]
 
-fn.addComment('for test')
+mf.addComments('for test', 1)
 for (let i = 0; i < list.length; i++) {
-    fn.add(`say ${list[i]}`)
+    mf.add(`say ${list[i]}`)
 }
 
-fn.addComment('sort test')
-list.sort((a, b) => a - b).forEach(v => fn.add(`say ${v}`))
+mf.addComments('sort test', 2)
+list.sort((a, b) => a - b).forEach(v => mf.add(`say ${v}`))
 
+mf.addComments('测试多行注释'.split(''))
 
+mf.create()
 
-fn.create()
-
-export default toNormalFunction(__filename)
+export default mout(__filename)

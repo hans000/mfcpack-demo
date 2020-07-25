@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc": "rimraf ./bin && tsc && node ./bin/index.js"
+    "build": "npx ts-node ./mcfpack/src/build.ts"
   },
   "keywords": [],
   "author": "hans000",
@@ -15,6 +15,6 @@
     "@types/rimraf": "^3.0.0",
     "fs-extra": "^9.0.1",
     "rimraf": "^3.0.2",
-    "typescript": "^3.9.7"
+    "ts-node": "^8.10.2"
   }
 }
