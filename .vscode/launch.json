@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "启动程序",
             "args": [
-                "${workspaceRoot}/src/lib/compiler.ts" // 入口文件
+                "${workspaceRoot}/mcfpack/src/build.ts" // 入口文件
             ],
             "runtimeArgs": [
                 "--nolazy",

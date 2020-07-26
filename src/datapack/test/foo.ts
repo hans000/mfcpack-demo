@@ -1,9 +1,13 @@
+import { foo } from './../../store/foo';
 import bar from "./bar";
 import { MFunction } from "../../../mcfpack/src";
+import { stringify } from '../../util';
 
 const mf = new MFunction(__filename)
 
 let flag = false
+
+mf.add(`data merge entity @e ${stringify(foo)}`)
 
 sayOkNo(flag)
 flag = true
