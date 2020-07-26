@@ -1,6 +1,6 @@
 import { foo } from './../../store/foo';
 import bar from "./bar";
-import { MFunction } from "../../../mcfpack/src";
+import { MFunction } from "mfcpack";
 import { stringify } from '../../util';
 
 const mf = new MFunction(__filename)

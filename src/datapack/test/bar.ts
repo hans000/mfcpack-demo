@@ -1,5 +1,5 @@
 import path from 'path'
-import { MFunction, mout } from '../../../mcfpack/src'
+import { MFunction, mout } from 'mfcpack'
 
 const mf = new MFunction(__filename)
 const list: number[] = [8, 5, 6, 1, 4]
